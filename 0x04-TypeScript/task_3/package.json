@@ -1,0 +1,19 @@
+{
+    "name": "typescript-ambient-namespaces",
+    "version": "1.0.0",
+    "description": "Task 3 - TypeScript ambient namespaces",
+    "main": "dist/bundle.js",
+    "scripts": {
+      "build": "webpack"
+    },
+    "author": "",
+    "license": "ISC",
+    "dependencies": {},
+    "devDependencies": {
+      "typescript": "^5.2.2",
+      "ts-loader": "^9.4.2",
+      "webpack": "^5.88.2",
+      "webpack-cli": "^5.1.4"
+    }
+  }
+  

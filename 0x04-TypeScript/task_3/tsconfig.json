@@ -1,0 +1,14 @@
+{
+    "compilerOptions": {
+      "target": "ES6",                  // Target modern JavaScript
+      "module": "ES6",                  // Use ES6 modules
+      "moduleResolution": "node",       // Node.js module resolution
+      "strict": true,                   // Enable strict type-checking
+      "esModuleInterop": true,          // Allow interop between CommonJS and ES6
+      "forceConsistentCasingInFileNames": true, // Ensure consistent file casing
+      "outDir": "./dist"                // Output directory for compiled files
+    },
+    "include": ["./js/**/*.ts"],         // Include all TypeScript files in the `js` folder
+    "exclude": ["node_modules"]          // Exclude dependencies
+  }
+  
