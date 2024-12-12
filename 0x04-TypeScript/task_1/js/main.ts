@@ -1,5 +1,3 @@
-// task_1/js/main.ts
-
 // Define the Teacher interface
 interface Teacher {
   readonly firstName: string; // Read-only, modifiable only during initialization
@@ -48,3 +46,40 @@ const printTeacher: printTeacherFunction = (firstName, lastName) => {
 
 // Example usage of printTeacher function
 console.log(printTeacher("John", "Doe")); // Output: J. Doe
+
+// Interface to describe the constructor for StudentClass
+interface StudentClassConstructor {
+  new (firstName: string, lastName: string): StudentClassInterface;
+}
+
+// Interface to describe the StudentClass
+interface StudentClassInterface {
+  firstName: string;
+  lastName: string;
+  workOnHomework(): string;
+  displayName(): string;
+}
+
+// Implementation of StudentClass
+class StudentClass implements StudentClassInterface {
+  firstName: string;
+  lastName: string;
+
+  constructor(firstName: string, lastName: string) {
+    this.firstName = firstName;
+    this.lastName = lastName;
+  }
+
+  workOnHomework(): string {
+    return "Currently working";
+  }
+
+  displayName(): string {
+    return this.firstName;
+  }
+}
+
+// Example usage
+const student = new StudentClass("John", "Doe");
+console.log(student.displayName()); // Output: John
+console.log(student.workOnHomework()); // Output: Currently working
