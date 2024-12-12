@@ -16,7 +16,7 @@
   \********************/
 /***/ (() => {
 
-eval("\n// task_1/js/main.ts\n// Example usage:\nvar teacher3 = {\n    firstName: 'John',\n    lastName: 'Doe',\n    fullTimeEmployee: false,\n    location: 'London',\n    contract: false, // Additional property\n};\nconsole.log(teacher3);\n\n\n//# sourceURL=webpack://task_1/./js/main.ts?");
+eval("\n// task_1/js/main.ts\n// Example usage of Teacher and Directors interfaces\nvar teacher3 = {\n    firstName: 'John',\n    lastName: 'Doe',\n    fullTimeEmployee: false,\n    location: 'London',\n    contract: false, // Additional property\n};\nconsole.log(teacher3);\nvar director1 = {\n    firstName: 'Jane',\n    lastName: 'Smith',\n    location: 'New York',\n    fullTimeEmployee: true,\n    numberOfReports: 10,\n};\nconsole.log(director1);\n// Implement the printTeacher function\nvar printTeacher = function (firstName, lastName) {\n    return \"\".concat(firstName.charAt(0), \". \").concat(lastName);\n};\n// Example usage of printTeacher function\nconsole.log(printTeacher(\"John\", \"Doe\")); // Output: J. Doe\n\n\n//# sourceURL=webpack://task_1/./js/main.ts?");
 
 /***/ })
 
