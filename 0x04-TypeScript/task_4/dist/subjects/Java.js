@@ -1,18 +1,12 @@
-"use strict";
-/// <reference path="./Teacher.ts" />
-/// <reference path="./Subject.ts" />
-var Subjects;
-(function (Subjects) {
-    class Java extends Subjects.Subject {
-        getRequirements() {
-            return "Here is the list of requirements for Java";
-        }
-        getAvailableTeacher() {
-            if (!this.teacher.experienceTeachingJava) {
-                return "No available teacher";
-            }
-            return `Available Teacher: ${this.teacher.firstName}`;
-        }
+import { Subject } from "./Subject";
+export class Java extends Subject {
+    getRequirements() {
+        return "Here is the list of requirements for Java";
     }
-    Subjects.Java = Java;
-})(Subjects || (Subjects = {}));
+    getAvailableTeacher() {
+        if (!this.teacher) {
+            return "No available teacher";
+        }
+        return `Available Teacher: ${this.teacher.firstName}`;
+    }
+}

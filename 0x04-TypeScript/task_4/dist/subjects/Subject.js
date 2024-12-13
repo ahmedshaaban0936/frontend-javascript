@@ -1,4 +1,3 @@
-"use strict";
 var Subjects;
 (function (Subjects) {
     class Subject {

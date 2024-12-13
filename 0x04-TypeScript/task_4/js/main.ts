@@ -1,40 +1,37 @@
-import { Teacher } from "./subjects/Teacher";
-import { Cpp } from ".subjects/Cpp";
+import { Cpp } from "./subjects/Cpp";
 import { Java } from "./subjects/Java";
 import { React } from "./subjects/React";
+import { Teacher } from "./subjects/Teacher";
 
+// Creating instances of subjects
+const cpp = new Cpp();
+const java = new Java();
+const react = new React();
 
-
-// Create and export a constant cpp for Cpp Subjects
-export const cpp = new Cpp();
-
-// Create and export a constant java for Java Subjects
-export const java = new Java();
-
-// Create and export a constant react for React Subjects
-export const react = new React();
-
-// Create and export one Teacher object cTeacher with experienceTeachingC = 10
-export const cTeacher: Teacher = {
-  firstName: 'John',
-  lastName: 'Doe',
-  experienceTeachingC: 10 // Adding experienceTeachingC property for Cpp subject
+// Defining a teacher with relevant experience
+const cTeacher: Teacher = {
+  firstName: "John",
+  lastName: "Doe",
+  experienceTeachingC: 10, // Experience teaching C
+  experienceTeachingJava: 5, // Example for Java experience (optional)
+  experienceTeachingReact: 3, // Example for React experience (optional)
 };
 
-// For Cpp subject, log to the console, set cTeacher as the teacher, call the two methods getRequirements and getAvailableTeacher, and print the strings they return
+// Cpp subject
 console.log("C++");
-cpp.setTeacher(cTeacher);
+cpp.teacher = cTeacher; // Assigning teacher
 console.log(cpp.getRequirements());
 console.log(cpp.getAvailableTeacher());
 
-// For Java subject, log to the console, set cTeacher as the teacher, call the two methods getRequirements and getAvailableTeacher, and print the strings they return
+// Java subject
 console.log("Java");
-java.setTeacher(cTeacher);
+java.teacher = cTeacher; // Assigning teacher
 console.log(java.getRequirements());
 console.log(java.getAvailableTeacher());
 
-// For React subject, log to the console, set cTeacher as the teacher, call the two methods getRequirements and getAvailableTeacher, and print the strings they return
+// React subject
 console.log("React");
-react.setTeacher(cTeacher);
+react.teacher = cTeacher; // Assigning teacher
 console.log(react.getRequirements());
 console.log(react.getAvailableTeacher());
+

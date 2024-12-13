@@ -3,7 +3,7 @@
 /// <reference path="./Subject.ts" />
 var Subjects;
 (function (Subjects) {
-    class Java extends Subjects.Subject {
+    class Java {
         getRequirements() {
             return "Here is the list of requirements for Java";
         }

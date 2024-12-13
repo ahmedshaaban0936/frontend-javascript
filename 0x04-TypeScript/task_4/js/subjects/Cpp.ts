@@ -1,21 +1,20 @@
-/// <reference path="./Teacher.ts" />
-/// <reference path="./Subject.ts" />
+import { Teacher } from "./Teacher"; // Ensure Teacher.ts has a properly defined and exported interface
 
-namespace Subjects {
-  export interface Teacher {
-    experienceTeachingC?: number;
+export class Cpp {
+  teacher: Teacher | undefined; // Ensure teacher is of the correct type
+
+  set setTeacher(teacher: Teacher) {
+    this.teacher = teacher;
   }
 
-  export class Cpp extends Subject {
-    getRequirements(): string {
-      return "Here is the list of requirements for Cpp";
-    }
+  getRequirements(): string {
+    return "Here is the list of requirements for Cpp";
+  }
 
-    getAvailableTeacher(): string {
-      if (!this.teacher.experienceTeachingC) {
-        return "No available teacher";
-      }
-      return `Available Teacher: ${this.teacher.firstName}`;
+  getAvailableTeacher(): string {
+    if (!this.teacher?.experienceTeachingC) {
+      return "No available teacher";
     }
+    return `Available Teacher: ${this.teacher.firstName}`;
   }
 }

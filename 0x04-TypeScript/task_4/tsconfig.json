@@ -1,13 +1,14 @@
 {
-    "compilerOptions": {
-      "target": "ES6",
-      "module": "ESNext",
-      "moduleResolution": "node",
-      "outDir": "./dist",
-      "strict": true
-    },
-    "include": [
-      "js/**/*"
-    ]
-  }
-  
+  "compilerOptions": {
+    "target": "ES6",
+    "module": "ESNext",
+    "moduleResolution": "node",
+    "outDir": "./dist",
+    "strict": true,
+    "resolveJsonModule": true,
+    "esModuleInterop": true,
+    "skipLibCheck": true // Optional, helps avoid certain library type errors
+  },
+  "include": ["js/**/*"],
+  "exclude": ["node_modules", "dist"]
+}

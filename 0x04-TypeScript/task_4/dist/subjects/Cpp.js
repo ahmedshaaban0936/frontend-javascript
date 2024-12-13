@@ -1,18 +1,12 @@
-"use strict";
-/// <reference path="./Teacher.ts" />
-/// <reference path="./Subject.ts" />
-var Subjects;
-(function (Subjects) {
-    class Cpp extends Subjects.Subject {
-        getRequirements() {
-            return "Here is the list of requirements for Cpp";
-        }
-        getAvailableTeacher() {
-            if (!this.teacher.experienceTeachingC) {
-                return "No available teacher";
-            }
-            return `Available Teacher: ${this.teacher.firstName}`;
-        }
+export class Cpp {
+    getRequirements() {
+        return "Here is the list of requirements for Cpp";
     }
-    Subjects.Cpp = Cpp;
-})(Subjects || (Subjects = {}));
+    getAvailableTeacher() {
+        var _a;
+        if (!((_a = this.teacher) === null || _a === void 0 ? void 0 : _a.experienceTeachingC)) {
+            return "No available teacher";
+        }
+        return `Available Teacher: ${this.teacher.firstName}`;
+    }
+}

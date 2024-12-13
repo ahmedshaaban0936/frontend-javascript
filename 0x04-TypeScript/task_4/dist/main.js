@@ -1,30 +1,23 @@
 import { Cpp } from "./subjects/Cpp";
 import { Java } from "./subjects/Java";
 import { React } from "./subjects/React";
-// Create and export a constant cpp for Cpp Subjects
-export const cpp = new Cpp();
-// Create and export a constant java for Java Subjects
-export const java = new Java();
-// Create and export a constant react for React Subjects
-export const react = new React();
-// Create and export one Teacher object cTeacher with experienceTeachingC = 10
-export const cTeacher = {
-    firstName: 'John',
-    lastName: 'Doe',
-    experienceTeachingC: 10 // Adding experienceTeachingC property for Cpp subject
+const cpp = new Cpp();
+const java = new Java();
+const react = new React();
+const cTeacher = {
+    firstName: "John",
+    lastName: "Doe",
+    experienceTeachingC: 10,
 };
-// For Cpp subject, log to the console, set cTeacher as the teacher, call the two methods getRequirements and getAvailableTeacher, and print the strings they return
 console.log("C++");
-cpp.setTeacher(cTeacher);
+cpp.teacher = cTeacher;
 console.log(cpp.getRequirements());
 console.log(cpp.getAvailableTeacher());
-// For Java subject, log to the console, set cTeacher as the teacher, call the two methods getRequirements and getAvailableTeacher, and print the strings they return
 console.log("Java");
-java.setTeacher(cTeacher);
+java.teacher = cTeacher;
 console.log(java.getRequirements());
 console.log(java.getAvailableTeacher());
-// For React subject, log to the console, set cTeacher as the teacher, call the two methods getRequirements and getAvailableTeacher, and print the strings they return
 console.log("React");
-react.setTeacher(cTeacher);
+react.teacher = cTeacher;
 console.log(react.getRequirements());
 console.log(react.getAvailableTeacher());
